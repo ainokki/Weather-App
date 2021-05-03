@@ -5,10 +5,14 @@ let humidityElement = document.querySelector("#humidity");
 let windElement = document.querySelector("#wind");
 let weatherdescriptionElement = document.querySelector("#description");
 let weathericonElement = document.querySelector("#weather-icon");
+let temperatureFahrenheit;
+let temperatureFahrenheitElement = document.querySelector("#fahrenheit");
 function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
+  temperatureFahrenheit = (Math.round(response.data.main.temp) / 5) * 9 + 32;
   let position = input.value || response.data.name;
   temperatureElement.innerHTML = `${temperature}`;
+  temperatureFahrenheitElement.innerHTML = `${temperatureFahrenheit}`;
   heading.innerHTML = input.value || response.data.name;
   humidityElement.innerHTML = `${response.data.main.humidity}`;
   windElement.innerHTML = `${response.data.wind.speed}`;
