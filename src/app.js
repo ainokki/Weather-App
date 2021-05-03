@@ -4,6 +4,7 @@ let heading = document.querySelector("h1");
 let humidityElement = document.querySelector("#humidity");
 let windElement = document.querySelector("#wind");
 let weatherdescriptionElement = document.querySelector("#description");
+let weathericonElement = document.querySelector("#weather-icon");
 function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
   let position = input.value || response.data.name;
@@ -12,9 +13,10 @@ function showTemperature(response) {
   humidityElement.innerHTML = `${response.data.main.humidity}`;
   windElement.innerHTML = `${response.data.wind.speed}`;
   weatherdescriptionElement.innerHTML = `${response.data.weather[0].main}`;
+  weathericonElement.src =
+    "http://openweathermap.org/img/w/" + response.data.weather[0].icon + ".png";
   console.log(response.data);
 }
-
 function showPosition(position) {
   let apiUrl =
     "https://api.openweathermap.org/data/2.5/weather?q=" +
