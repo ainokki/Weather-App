@@ -47,3 +47,20 @@ li {
   height: 64px;
   width: 64px;
 }
+
+.nextcity-form {
+  max-width: 600px;
+  margin: 30px auto 2px;
+  padding: 20px;
+  border: 2px solid #2a7fb1c9;
+  border-radius: 5px;
+  text-align: center;
+}
+
+button {
+  max-width: 600px;
+  margin: 30px auto 2px;
+  border: 2px solid #2a7fb1c9;
+  border-radius: 5px;
+  text-align: center;
+}

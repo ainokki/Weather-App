@@ -10,16 +10,17 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>Document</title>
   </head>
   <body>
     <div class="container">
       <div class="weather-app">
-        <h1>Paris</h1>
+        <h1 id="city">Paris</h1>
         <ul>
-          <li>Friday 05:00</li>
-          <li>Clear</li>
+          <li class="time">Friday 05:00</li>
+          <li id="description"></li>
         </ul>
         <div class="row">
           <div class="col-md-6">
@@ -29,18 +30,26 @@
                 alt="Clear"
                 class="float-left"
               />
-              <div class="float-left"><strong>9°</strong> | 48°</div>
+              <div class="float-left">
+                <strong id="temperature">9°</strong> C°| 48° F°
+              </div>
             </div>
           </div>
           <div class="col-md-6">
             <ul>
               <li>Precipitation: 2%</li>
-              <li>Humidity: 62%</li>
-              <li>Wind: 1m/s</li>
+              <li>Humidity: <span id="humidity"></span></li>
+              <li>Wind: <span id="wind"></span>m/s</li>
             </ul>
           </div>
         </div>
       </div>
+    </div>
+    <div id="nextcity-form">
+      <input type="city" id="city-input" placeholder="Where next?" />
+      <button id="searchCityButton">Submit</button>
+      <span>or use</span>
+      <button id="currentLocationButton">Current Location</button>
     </div>
     <small
       ><a href="https://github.com/ainokki/Weather-App" target="_blank"
