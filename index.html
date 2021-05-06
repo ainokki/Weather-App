@@ -10,13 +10,21 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Duru+Sans&display=swap"
+      rel="stylesheet"
+    />
+
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>Document</title>
   </head>
   <body>
     <div class="container">
-      <div class="weather-app">
+      <div class="weather-app weather-app-loading">
+        <h1>Loading...</h1>
+      </div>
+      <div class="weather-app weather-app-loaded" style="display: none">
         <h1 id="city">Paris</h1>
         <ul>
           <li class="time">Friday 05:00</li>
