@@ -8,7 +8,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;
-  background: linear-gradient(to right, #8da3ab, #181c49);
+  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
 }
 
 .weather-app {
@@ -17,7 +17,7 @@ body {
   padding: 20px;
   color: #ffffff;
   border-radius: 10px;
-  background-image: linear-gradient(to top, #9795f03b 0%, #ee99add5 100%);
+  background-image: linear-gradient(-225deg, #b7f8db 0%, #50a7c2 100%);
   filter: drop-shadow(0 0 0.1rem rgba(36, 36, 37, 0.4));
 }
 
@@ -68,7 +68,7 @@ li {
   color: #ffffff;
   border-radius: 10px;
   text-align: center;
-  background-image: linear-gradient(to top, #9795f03b 0%, #ee99add5 100%);
+  background-image: linear-gradient(-225deg, #b7f8db 0%, #50a7c2 100%);
   filter: drop-shadow(0 0 0.1rem rgba(36, 36, 37, 0.4));
 }
 
@@ -101,7 +101,7 @@ button {
 }
 
 a {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.021);
   text-decoration: none;
 }
 
@@ -112,7 +112,4 @@ small {
 
 .col-2 {
   text-align: center;
-}
-
-.weather-forecast {
 }
