@@ -14,6 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Duru+Sans&display=swap"
       rel="stylesheet"
     />
+    <link href="src/icons/all.css" rel="stylesheet" />
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
@@ -53,19 +54,23 @@
             </ul>
           </div>
         </div>
+        <div class="weather-forecast" id="weather-forecast">
+        </div>
       </div>
     </div>
     <div id="nextcity-form">
-      <input type="city" id="city-input" placeholder="Where next?" />
-      <button id="searchCityButton">Submit</button>
-      <span>or use</span>
-      <button id="currentLocationButton">Current Location</button>
+      <input type="city" id="city-input" placeholder="Search" />
+      <button id="searchCityButton">
+        <i class="fas fa-search-location"></i>
+      </button>
+      <span>or </span>
+      <button id="currentLocationButton"><i class="fas fa-map-marker-alt"></i></i></button>
     </div>
     <small
       ><a href="https://github.com/ainokki/Weather-App" target="_blank"
         >Open-source code</a
       >
-      by Aino Kinnunen</small
+      by Aino Kinnunen 👩🏻‍💻</small
     >
     <script src="src/app.js"></script>
   </body>

@@ -26,6 +26,38 @@ function showTemperature(response) {
   weatherAppLoading.style.display = "none";
   weatherAppLoaded.style.display = "block";
 }
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#weather-forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Today", "Tomorrow", "Sunday", "Monday", "Tuesday"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+    <div class="row">
+        <div class="col-2">
+            <div class="weather-forecast-date">
+                ${day}<img
+                  src="http://openweathermap.org/img/wn/50d@2x.png"
+                  alt=""
+                  width="36"
+                />
+            </div>
+            <div class="weather-forecast-temperatures">
+                <span class="weather-forecast-temperatures-max"> 18°</span>
+                <span class="weather-forecast-temperatures-min">12°</span>
+            </div>
+        </div>
+    </div>
+          `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function showPosition(position) {
   let apiUrl =
     "https://api.openweathermap.org/data/2.5/weather?q=" +
@@ -74,6 +106,9 @@ let updateCity = function () {
   showPosition(input.value);
 };
 
+let updateCurrentCity = function () {
+  navigator.geolocation.getCurrentPosition(showCurrentPosition);
+};
 navigator.geolocation.getCurrentPosition(showCurrentPosition);
 button.addEventListener("click", updateCity);
 currentLocationButton.addEventListener("click", updateCurrentCity);
@@ -84,3 +119,5 @@ input.addEventListener("keyup", function (event) {
     showPosition(input.value);
   }
 });
+
+displayForecast();
